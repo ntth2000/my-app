@@ -1,0 +1,39 @@
+.mediumCard {
+  cursor: pointer;
+  scroll-snap-align: start !important;
+  .mediumCard-img {
+    img {
+      width: calc(100vw - 141px);
+      height: calc(100vw - 141px);
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  .mediumCard-text {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mediumCard {
+    .mediumCard-img {
+      img {
+        width: calc((100vw - 127px) / 3);
+        height: calc((100vw - 127px) / 3);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mediumCard {
+    .mediumCard-img {
+      img {
+        width: calc((100vw - 221px) / 4);
+        height: calc((100vw - 221px) / 4);
+      }
+    }
+  }
+}

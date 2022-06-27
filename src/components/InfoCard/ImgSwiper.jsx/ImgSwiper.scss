@@ -1,0 +1,50 @@
+.swiper-button-next,
+.swiper-button-prev {
+  transition: display 0.5s ease;
+  display: none !important;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 0;
+  box-shadow: -1px 11px 13px -1px rgba(113, 113, 133, 0.68) !important;
+  -webkit-box-shadow: -1px 11px 13px -1px rgba(113, 113, 133, 0.68) !important;
+  -moz-box-shadow: -1px 11px 13px -1px rgba(113, 113, 133, 0.68) !important;
+  .swiper-button-icon {
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center;
+    font-size: 15px !important;
+    color: #222;
+  }
+  &::after {
+    content: none;
+  }
+}
+.swiper-pagination-bullet {
+  width: var(
+    --swiper-pagination-bullet-width,
+    var(--swiper-pagination-bullet-size, 6px)
+  );
+  height: var(
+    --swiper-pagination-bullet-height,
+    var(--swiper-pagination-bullet-size, 6px)
+  );
+}
+.swiper-pagination-bullet-active {
+  background-color: white;
+}
+.swiper {
+  min-width: 0;
+}
+
+.infoCardImg {
+  border: 0.5px solid rgb(168, 168, 168);
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}

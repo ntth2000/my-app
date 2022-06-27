@@ -1,0 +1,79 @@
+.guestPicker {
+  width: 350px;
+  z-index: 999;
+  position: fixed;
+  top: 185px;
+  right: 40px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0px 6px 20px rgb(0 0 0 / 20%) !important;
+  display: none;
+  &.active {
+    display: block;
+  }
+  .guestPickerItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .guestPickerItemLeft {
+      .guestPickerItemLeftName {
+        font-size: 16px;
+        margin-bottom: 3px;
+        font-weight: 500;
+      }
+      .guestPickerItemLeftDesc {
+        color: rgb(113, 113, 113);
+        font-size: 14px;
+      }
+    }
+    .guestPickerItemRight {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .guestPickerItemInput {
+        text-align: center;
+        width: 50px;
+      }
+      button {
+        background-color: white;
+        display: inline-block;
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px rgb(176, 176, 176) !important;
+        cursor: pointer;
+        &:disabled {
+          cursor: not-allowed;
+          &:hover {
+            border: solid 1px rgb(176, 176, 176) !important;
+          }
+        }
+        .guestPickerItemRightIcon {
+          font-size: 18px !important;
+          fill: rgb(82, 82, 82) !important;
+        }
+        &:hover {
+          border: solid 1px rgb(59, 59, 59) !important;
+          .guestPickerItemRightIcon {
+            fill: rgb(59, 59, 59) !important;
+          }
+        }
+      }
+    }
+  }
+  .guestPickerItemMarker {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(241, 241, 241);
+    margin: 15px 0px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .guestPicker {
+    right: calc((100vw - 848px - 19px) / 2);
+  }
+}

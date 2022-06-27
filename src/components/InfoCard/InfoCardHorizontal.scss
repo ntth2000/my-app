@@ -1,0 +1,155 @@
+.swiper-slide {
+  width: 100%;
+}
+.infoCardHorizontal {
+  display: none;
+  position: relative;
+  width: 100%;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px rgb(240, 240, 240);
+
+  .infoCardHorizontalContainer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    &:hover {
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: flex !important;
+        transition: display 0.5s ease !important;
+      }
+    }
+    .infoCardHorizontalImgContainer {
+      max-width: 300px;
+      margin-right: 15px;
+      aspect-ratio: 3/2;
+    }
+    .infoCardHorizontalInformation {
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .infoCardHorizontalInformationTop {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        .infoCardHorizontalInformationTopLeft {
+          text-overflow: clip;
+          position: relative;
+          .infoCardHorizontalLocation {
+            font-size: 15px;
+            color: rgb(113, 113, 113) !important;
+            margin-bottom: 5px;
+          }
+          .infoCardHorizontalDesc {
+            font-size: 18px;
+            font-weight: 300;
+            position: relative;
+            &::after {
+              content: "" !important;
+              position: relative !important;
+              width: 40px !important;
+              height: 1px !important;
+              background-color: rgb(221, 221, 221) !important;
+              bottom: -10px !important;
+              display: block;
+              left: 0 !important;
+              margin-bottom: 20px;
+            }
+          }
+          .infoCardHorizontalDetail {
+            font-size: 15px;
+            margin-bottom: 5px;
+            span {
+              color: rgb(113, 113, 113) !important;
+              margin-right: 7px;
+              &::after {
+                content: "" !important;
+                position: relative !important;
+                width: 2px !important;
+                height: 2px !important;
+                border-radius: 50%;
+                background-color: rgb(113, 113, 113) !important;
+                left: 4px !important;
+                display: inline-block;
+                bottom: 5px !important;
+              }
+              &:last-child {
+                &::after {
+                  content: none !important;
+                }
+              }
+            }
+          }
+        }
+        .infoCardHorizontalInformationTopRight {
+          .infoCardHorizontalInformationTopRightIconWrapper {
+            width: 40px !important;
+            height: 40px !important;
+            border-radius: 50% !important;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+              background-color: rgb(241, 241, 241);
+            }
+            .infoCardHorizontalInformationTopRightIcon {
+              font-size: 25px !important;
+            }
+          }
+        }
+      }
+      .infoCardHorizontalInformationBottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        .infoCardHorizontalInformationBottomLeft {
+          .infoCardHorizontalRate {
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            font-size: 14px !important;
+
+            .infoCardHorizontalRateTotalReviews {
+              color: rgb(113, 113, 113) !important;
+              margin-left: 2px;
+            }
+            .infoCardHorizontalRateIcon {
+              margin-right: 2px;
+              fill: #ff385c;
+              font-size: 18px !important;
+            }
+          }
+        }
+        .infoCardHorizontalInformationBottomRight {
+          margin-bottom: 4px;
+          text-align: right;
+          margin-right: 7.5px;
+          .infoCardHorizontalPrice {
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 5px;
+            span {
+              font-weight: 600;
+              margin-right: 3px;
+            }
+          }
+          .infoCardHorizontalTotalPrice {
+            color: rgb(113, 113, 113);
+            font-size: 14px;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .infoCardHorizontal {
+    display: block;
+  }
+}

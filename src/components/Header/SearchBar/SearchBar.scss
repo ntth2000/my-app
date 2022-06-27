@@ -1,0 +1,98 @@
+.searchBar {
+  display: none;
+  width: 100%;
+  position: fixed;
+  top: 80px;
+  z-index: 999;
+  background-color: white;
+  padding: 24px;
+  align-items: center;
+  transition: all 0.5s ease;
+  box-shadow: -1px 12px 20px -5px rgba(219, 219, 219, 0.75);
+  -webkit-box-shadow: -1px 12px 20px -5px rgba(219, 219, 219, 0.75);
+  -moz-box-shadow: -1px 12px 20px -5px rgba(219, 219, 219, 0.75);
+
+  &.active {
+    display: flex;
+    flex-direction: column;
+  }
+  .searchBarWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(247, 247, 247);
+    border: solid 1px rgb(219, 219, 219);
+    border-radius: 50px;
+    .searchBarItemContainer {
+      flex: 1;
+      position: relative;
+      background: transparent;
+      &:first-child,
+      &:last-child {
+        flex: 1.3;
+      }
+      &::after {
+        position: absolute !important;
+        width: 1px !important;
+        height: 36px !important;
+        content: "" !important;
+        background-color: rgb(219, 219, 219) !important;
+        right: 0px !important;
+        top: 14px !important;
+        z-index: 9999 !important;
+        display: inline-block;
+      }
+      &:last-child::after {
+        background-color: transparent !important;
+      }
+      .searchBarSubmit {
+        position: absolute;
+        top: 0;
+        right: -10px;
+        cursor: pointer;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 0 50px 50px 0;
+        z-index: 999;
+        a {
+          width: 75%;
+          height: 75%;
+          border-radius: 50%;
+          background: #ff385c;
+          &:hover {
+            background: radial-gradient(
+              circle at center center,
+              rgb(255, 56, 92) 0%,
+              rgb(230, 30, 77) 27.5%,
+              rgb(227, 28, 95) 40%,
+              rgb(215, 4, 102) 57.5%,
+              rgb(189, 30, 89) 75%,
+              rgb(189, 30, 89) 100%
+            ) !important;
+            background-size: 200% 200% !important;
+          }
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .searchBar-icon {
+            fill: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .searchBar {
+    padding: 24px 40px;
+    justify-content: center;
+    .searchBarWrapper {
+      max-width: 848px;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.infoCardVertical {
+  margin-bottom: 30px;
+  position: relative;
+  .infoCardVerticalContainer {
+    position: relative;
+    &:hover {
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: flex !important;
+        transition: display 0.5s ease !important;
+      }
+    }
+    .infoCardVerticalImgContainer {
+      width: 100%;
+
+      margin-bottom: 5px;
+    }
+    .infoCardVerticalInformation {
+      position: relative;
+      .infoCardVerticalRate {
+        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        font-size: 14px !important;
+        .infoCardVerticalRateTotalReviews {
+          color: rgb(113, 113, 113) !important;
+          margin-left: 2px;
+        }
+        .infoCardVerticalRateIcon {
+          margin-right: 2px;
+          fill: #ff385c;
+          font-size: 18px !important;
+        }
+      }
+      .infoCardVerticalLocation {
+        font-size: 18px !important;
+        font-weight: 300;
+        position: relative;
+        margin-bottom: 5px;
+        .infoCardVerticalLocationType {
+          margin-right: 12px;
+          position: relative;
+          &::after {
+            content: "";
+            position: relative !important;
+            width: 2px !important;
+            height: 2px !important;
+            right: -6px !important;
+            top: -4px !important;
+            border-radius: 50% !important;
+            background-color: #222 !important;
+            display: inline-block;
+          }
+        }
+      }
+      .infoCardVerticalDesc {
+        font-size: 18px !important;
+        font-weight: 300;
+        margin-bottom: 5px;
+      }
+      .infoCardVerticalPrice {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 5px;
+        span {
+          font-weight: 600;
+          margin-right: 3px;
+        }
+      }
+      .infoCardVerticalTotalPrice {
+        color: rgb(113, 113, 113);
+        font-size: 14px;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .infoCardVertical {
+    display: none;
+  }
+}

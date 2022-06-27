@@ -1,0 +1,42 @@
+.smallCard {
+  cursor: pointer;
+  display: flex;
+  scroll-snap-align: start !important;
+  .smallCard-img {
+    margin-right: 12px;
+    img {
+      width: 72px;
+      height: 72px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+  .smallCard-infor {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .smallCard-location {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    .smallCard-time {
+      font-weight: 300;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .smallCard {
+    &:nth-child(7),
+    &:last-child {
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .smallCard {
+    &:nth-child(7),
+    &:last-child {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.largeCard {
+  scroll-snap-align: start !important;
+  .largeCard-img {
+    img {
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  .largeCard-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .largeCard-desc {
+    font-size: 15px;
+    font-weight: 300;
+  }
+}
+@media screen and (min-width: 768px) {
+  .largeCard {
+    .largeCard-img {
+      img {
+        width: calc((100vw - 127px) / 3);
+        height: calc((100vw - 127px) / 3);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .largeCard {
+    .largeCard-img {
+      img {
+        width: calc((100vw - 207px) / 3);
+        height: calc((100vw - 207px) / 3);
+      }
+    }
+  }
+}
